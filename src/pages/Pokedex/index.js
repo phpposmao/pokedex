@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import './styles.scss';
 
+import pokeballImg from '../../assets/pokeball.svg'
+
 export default function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
 
@@ -22,7 +24,7 @@ export default function Pokedex() {
           <div className='info'>
             <span className='number'>{pokemon.id}</span>
             <h3 className='name'>{pokemon.name}</h3>
-            <small className='type'>{pokemon.type}</small>
+            <img src={pokeballImg} alt="pokeball" />
           </div>
         </div>
       ))}
